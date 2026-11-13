@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Spatial UI glass surface utilities */
+.spatial-glass {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 20px 44px -16px rgba(15, 41, 74, 0.12),
+    0 1px 2px rgba(15, 41, 74, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.spatial-glass-soft {
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(16px) saturate(135%);
+  -webkit-backdrop-filter: blur(16px) saturate(135%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow:
+    0 12px 32px -12px rgba(15, 41, 74, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.spatial-glass-dark {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Custom accessible range slider for visa selector */
+input[type="range"].visa-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  background: #dbe4f0;
+  outline: none;
+}
+
+input[type="range"].visa-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: #0F294A;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 41, 74, 0.35);
+  cursor: pointer;
+}
+
+input[type="range"].visa-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: #0F294A;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 41, 74, 0.35);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
