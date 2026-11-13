@@ -44,7 +44,7 @@ export function SiteHeader({
             <img
               src={logoDataUrl}
               alt={brandName}
-              className="h-9 w-auto max-w-[170px] object-contain"
+              className="h-90 w-auto max-w-[170px] object-contain"
             />
           ) : (
             <>

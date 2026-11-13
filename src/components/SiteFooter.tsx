@@ -90,7 +90,7 @@ export function SiteFooter({
                   <img
                     src={cms.logoDataUrl}
                     alt={brandName}
-                    className="h-8 w-auto max-w-[160px] object-contain"
+                    className="h-80 w-auto max-w-[160px] object-contain"
                   />
                 </div>
               ) : (
